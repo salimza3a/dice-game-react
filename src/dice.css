@@ -1,0 +1,74 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+
+    
+}
+.wrapperDices {
+    display: flex;
+
+}
+
+
+button {
+   margin-top: 5%;
+   padding: 5px 15px;
+   background-color: rgb(208, 112, 52);
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   font-size: 25px;
+   color: #f2f2f2;
+   width: 200px;
+   transition: all .2s;
+   
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgb(149, 157, 57);
+}
+
+.diceContainer {
+  margin: 20px;
+  color:rgb(212, 155, 73)
+  
+}
+button:disabled {
+    background-color: rgb(116, 116, 116);
+}
+
+.shaking {
+    animation-name:  shakeMe;
+    animation-duration: 1s;
+}
+
+@keyframes shakeMe {
+    from {
+        transform: translate3d(0, 0 , 0);
+    }
+    15% {
+        transform: translate3d((-25% , 0 , 0)) rotate3d(0 , 0 , 1, -5deg)
+    }
+    30% {
+        transform: translate3d(20% , 0 , 0) rotate3d( 0 , 0 , 1, 3deg);
+
+    }
+    45% {
+        transform: translate3d(-15% , 0 , 0) rotate3d(0 , 0 , 1 -3deg);
+    }
+    60% {
+        transform: translate3d(10%, 0 , 0) rotate3d( 0 , 0 , 1 , 2deg);
+
+
+    }
+    75% {
+        transform: translate3d( -5% , 0 , 0) rotate3d( 0 , 0 , 1 , -1deg);
+
+    }
+    to {
+        transform: translate3d(0 , 0 , 0);
+    }
+}

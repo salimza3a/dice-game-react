@@ -1,15 +1,12 @@
 import React from "react";
-
+import RollDice from './RollDice'
 class App extends React.Component {
 
-  constructor() {
-    super()
-
-  }
+ 
 
   render () {
     
-    return ( <h2>Hello</h2>)
+    return ( <RollDice />)
   }
 
 }
